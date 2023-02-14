@@ -24,6 +24,6 @@ int main(){
 			count++;
 		}
 	}
-	printf("NoofWays =%d\n",count);
+	printf("Number ofWays =%d\n",count);
 	return 0;
 }
