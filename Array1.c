@@ -1,17 +1,39 @@
 #include <stdio.h>
+int Sum(int n);
 int main()
 {
-	int arr[100];
-	int i_value=0;
-	int value=26;
-	for(i_value=0;i_value<=100;i_value++,value +=1)
+	int num, i;
+	printf("enter number: ");
+	scanf("%d", &num);
+	int flag =0;
+	for(i=2;i<=num/2;++i)
 	{
-		arr[i_value]=value;
+		if(sum(i)==1){
+			if(sum(num-i) ==1){
+				printf("\nthe given %d can be expressed as the sum of %d and %d",num,i,num -i);
+				flag=1;
+			}
+		}
 	}
-	for(i_value=0;i_value<100;i_value++)
-	{
-		printf("\nelement in array a[%d] =%d",i_value,arr[i_value]);
-	}
-	printf("\n\n");
+	if (flag ==0)
+	printf("the given %d cannot be expressedas the sum of two prime numbers", num);
 	return 0;
 }
+int sum(int n)
+{
+	int i, isPrime=1;
+	if(n ==0 || n ==1){
+		isPrime =0;
+	}
+	else{
+
+	for(i=2;i<=n/2;++i){
+		if(n%i ==0){
+		break;
+	}
+}
+}
+return isPrime;
+
+}
+
